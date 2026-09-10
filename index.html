@@ -1608,6 +1608,15 @@ html { -webkit-text-size-adjust: 100%; }
  .person-left img, .person-right img { bottom: 34%; }
  .side-label { top: calc(66cqh - min(60cqw,58.5cqh) - 76px); }
 }
+
+/* Desktop-only portrait framing. Phone and tablet styles stay intact. */
+@media (min-width: 1025px) { .hero-center .quote { max-width: 300px; }
+ .person-left img { width: auto; height: 62%; max-width: 36%; object-fit: contain; left: 0%; bottom: 21%; }
+ .person-right img { width: auto; height: 74%; max-width: 42%; object-fit: contain; right: -3%; bottom: 21%; }
+ .side-label { top: 9%; bottom: auto; font-size: clamp(28px,2.4vw,38px); line-height: 1; }
+ .person-left .side-label { left: 6%; }
+ .person-right .side-label { right: 6%; }
+}
 </style>
 </head>
 
@@ -2609,5 +2618,6 @@ revealElements
 
 </body>
 </html>
+
 
 
