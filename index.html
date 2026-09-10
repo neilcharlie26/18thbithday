@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>Samantha | 18th Birthday</title>
+
+<link href="fonts.css" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080402;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+}
+
+:root {
+    --gold: #d3a047;
+    --gold-light: #f3d792;
+    --dark: #080402;
+    --cream: #f8f0e4;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100svh;
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(10, 5, 2, .15),
+            rgba(10, 5, 2, .35)
+        ),
+        url("hero-bg.png")
+        center center / cover
+        no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* center glow */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 38%,
+            rgba(221, 161, 58, .13),
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+
+/* bottom darkness */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 28%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(4, 2, 1, .35)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO MAIN GRID
+========================================= */
+
+.hero-layout {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 1fr)
+        minmax(420px, 570px)
+        minmax(220px, 1fr);
+
+    align-items: center;
+}
+
+
+/* =========================================
+   PEOPLE
+========================================= */
+
+.person {
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: visible;
+
+    pointer-events: none;
+}
+
+
+.person img {
+    position: absolute;
+
+    bottom: 0;
+
+    height: 88%;
+    width: auto;
+
+    max-width: none;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 18px 30px
+            rgba(0,0,0,.60)
+        );
+}
+
+
+.person-left img {
+    left: 4%;
+}
+
+
+.person-right img {
+    right: 4%;
+}
+
+
+/* =========================================
+   CENTER
+========================================= */
+
+.hero-center {
+    position: relative;
+
+    z-index: 7;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding:
+        25px 10px 35px;
+}
+
+
+.invited {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    color: #ede0cf;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================================
+   18
+========================================= */
+
+.number-area {
+    height: 210px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.crown {
+    position: absolute;
+
+    top: 4px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 34px;
+
+    color: var(--gold-light);
+}
+
+
+.number-wrap {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.eighteen {
+    font-family:
+        "Italiana",
+        serif;
+
+    font-size: 220px;
+
+    line-height: .78;
+
+    background:
+        linear-gradient(
+            125deg,
+            #855111,
+            #d99d34,
+            #ffe9a7,
+            #bb7620,
+            #f4db96,
+            #81500f
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    filter:
+        drop-shadow(
+            0 7px 10px
+            rgba(0,0,0,.45)
+        );
+}
+
+
+.ordinal {
+    margin-top: 34px;
+    margin-left: -8px;
+
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 44px;
+
+    color: #ecc268;
+}
+
+
+/* =========================================
+   BIRTHDAY
+========================================= */
+
+.birthday {
+    margin-top: -16px;
+
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 83px;
+
+    line-height: .85;
+
+    font-weight: 400;
+
+    color: #e1ad4e;
+}
+
+
+.celebration {
+    margin-top: 21px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 10px;
+
+    letter-spacing: 7px;
+
+    color: #e2d5c5;
+}
+
+
+.samantha {
+    margin-top: 5px;
+
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 68px;
+
+    font-weight: 400;
+
+    color: #fff7ec;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin:
+        1px 0 10px;
+}
+
+
+.divider span {
+    width: 60px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d2a54e
+        );
+}
+
+
+.divider span:last-child {
+    transform:
+        rotate(180deg);
+}
+
+
+.divider b {
+    font-size: 15px;
+
+    font-weight: 400;
+
+    color: #ecc978;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote {
+    max-width: 450px;
+
+    margin:
+        0 auto 13px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #e5d8c7;
+}
+
+
+/* =========================================
+   CAKE
+========================================= */
+
+.cake-area {
+    height: 53px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.cake {
+    width: 82px;
+    height: 31px;
+
+    position: relative;
+
+    border-radius:
+        8px 8px 3px 3px;
+
+    border:
+        1px solid
+        rgba(221, 170, 80, .45);
+
+    background:
+        linear-gradient(
+            135deg,
+            #2e1208,
+            #5c2714,
+            #1a0904
+        );
+}
+
+
+.cake::after {
+    content: "18";
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        "Italiana",
+        serif;
+
+    font-size: 19px;
+
+    color: #ddb263;
+}
+
+
+.candles {
+    position: absolute;
+
+    bottom: 29px;
+
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.candles i {
+    position: relative;
+
+    display: block;
+
+    width: 2px;
+    height: 16px;
+
+    background: #ebc15f;
+}
+
+
+.candles i::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 14px;
+
+    width: 5px;
+    height: 7px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        #ffc54e;
+
+    box-shadow:
+        0 0 7px
+        #ffc04c;
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown-box {
+    width: 100%;
+
+    max-width: 530px;
+
+    margin: auto;
+
+    padding:
+        11px 18px 14px;
+
+    border:
+        1px solid
+        rgba(226, 177, 84, .75);
+
+    border-radius: 20px;
+
+    background:
+        rgba(55, 28, 9, .84);
+
+    backdrop-filter:
+        blur(7px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.28);
+}
+
+
+.count-title {
+    margin-bottom: 9px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #dfcfb8;
+}
+
+
+.count-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1px
+        1fr 1px
+        1fr 1px
+        1fr;
+
+    align-items: center;
+}
+
+
+.count-item strong {
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color: #fff0cf;
+}
+
+
+.count-item small {
+    display: block;
+
+    margin-top: 1px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #ceb99b;
+}
+
+
+.count-line {
+    width: 1px;
+    height: 35px;
+
+    background:
+        rgba(
+            255,
+            231,
+            188,
+            .38
+        );
+}
+
+
+/* =========================================
+   INVITATION
+========================================= */
+
+.invitation-section {
+    padding:
+        100px 20px;
+
+    background:
+        #f6ede0;
+
+    color:
+        #3a2412;
+}
+
+
+.invitation-card {
+    width:
+        min(760px, 100%);
+
+    margin: auto;
+
+    padding:
+        65px 50px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(140, 94, 36, .27);
+
+    background:
+        rgba(255,255,255,.36);
+
+    box-shadow:
+        0 25px 70px
+        rgba(70, 42, 15, .07);
+}
+
+
+.eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 6px;
+
+    color: #9b713d;
+}
+
+
+.script-title {
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 68px;
+
+    font-weight: 400;
+
+    color: #4d2c13;
+}
+
+
+.invitation-card p:last-child {
+    max-width: 570px;
+
+    margin:
+        25px auto 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #6d5843;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.details-section {
+    padding:
+        100px
+        max(
+            20px,
+            calc((100vw - 1050px)/2)
+        );
+
+    background:
+        #fff8ec;
+
+    color:
+        #392310;
+}
+
+
+.section-heading {
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 67px;
+
+    font-weight: 400;
+
+    color: #4b2a11;
+}
+
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+}
+
+
+.detail-card {
+    padding:
+        25px 30px;
+
+    text-align: center;
+}
+
+
+.detail-card:not(:last-child) {
+    border-right:
+        1px solid
+        rgba(120, 80, 35, .18);
+}
+
+
+.detail-icon {
+    font-size: 28px;
+
+    margin-bottom: 13px;
+
+    color: #9f7130;
+}
+
+
+.detail-card label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: #8f6b40;
+}
+
+
+.detail-card h3 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 24px;
+}
+
+
+.detail-card p {
+    margin-top: 6px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    color: #705e49;
+}
+
+
+/* =========================================
+   PROGRAM
+========================================= */
+
+.program-section {
+    padding:
+        100px
+        max(
+            20px,
+            calc((100vw - 820px)/2)
+        );
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(194, 133, 38, .13),
+            transparent 40%
+        ),
+        #080402;
+}
+
+
+.program-section
+.section-heading h2 {
+    color:
+        #eccc88;
+}
+
+
+.program-list {
+    width: 100%;
+}
+
+
+.program-item {
+    display: grid;
+
+    grid-template-columns:
+        55px 1px 1fr;
+
+    gap: 20px;
+}
+
+
+.program-number {
+    padding-top: 13px;
+
+    text-align: right;
+
+    font-family:
+        "Italiana",
+        serif;
+
+    font-size: 28px;
+
+    color: #a77d40;
+}
+
+
+.program-line {
+    position: relative;
+
+    width: 1px;
+
+    min-height: 115px;
+
+    background:
+        linear-gradient(
+            #d0a24e,
+            rgba(208,162,78,.04)
+        );
+}
+
+
+.program-line::before {
+    content: "";
+
+    position: absolute;
+
+    top: 23px;
+    left: 50%;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background: #ddb25c;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(221,178,92,.08);
+}
+
+
+.program-info {
+    padding:
+        7px 0 35px;
+}
+
+
+.program-info small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color: #927047;
+}
+
+
+.program-info h3 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    color: #efce92;
+}
+
+
+.program-info p {
+    max-width: 470px;
+
+    margin-top: 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    color: #9f8d76;
+}
+
+
+.special .program-info {
+    margin-bottom: 20px;
+
+    padding:
+        22px 24px;
+
+    border:
+        1px solid
+        rgba(209,163,75,.22);
+
+    background:
+        rgba(180,119,31,.07);
+}
+
+
+/* =========================================
+   PARTICIPANTS
+========================================= */
+
+.participants {
+    padding:
+        95px
+        max(
+            18px,
+            calc((100vw - 1100px)/2)
+        );
+}
+
+
+.candles-section {
+    background:
+        #f4ecdf;
+
+    color:
+        #312015;
+}
+
+
+.shots-section {
+    background:
+        #0a0503;
+}
+
+
+.roses-section {
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(111, 28, 14, .17),
+            transparent 45%
+        ),
+        #100705;
+}
+
+
+.participant-heading {
+    max-width: 600px;
+
+    margin:
+        0 auto 50px;
+
+    text-align: center;
+}
+
+
+.participant-heading
+.big-number {
+    display: block;
+
+    font-family:
+        "Italiana",
+        serif;
+
+    font-size: 95px;
+
+    line-height: .8;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8e5915,
+            #f0d18d,
+            #ad7124
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+}
+
+
+.participant-heading h2 {
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 64px;
+
+    font-weight: 400;
+
+    color:
+        #ddb366;
+}
+
+
+.participant-heading p {
+    max-width: 480px;
+
+    margin:
+        10px auto 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color:
+        #a1907b;
+}
+
+
+.candles-section
+.participant-heading p {
+    color:
+        #756452;
+}
+
+
+.names-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 12px;
+}
+
+
+.name-card {
+    min-height: 76px;
+
+    padding:
+        12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border:
+        1px solid
+        rgba(210,163,76,.18);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+
+.name-card span {
+    font-family:
+        "Italiana",
+        serif;
+
+    font-size: 24px;
+
+    color:
+        #a57a3d;
+}
+
+
+.name-card h4 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+
+.candles-section
+.name-card {
+    background:
+        rgba(255,255,255,.35);
+
+    border-color:
+        rgba(126,84,36,.15);
+}
+
+
+/* =========================================
+   ENDING
+========================================= */
+
+.ending {
+    min-height: 75vh;
+
+    padding:
+        70px 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(178,110,24,.22),
+            transparent 45%
+        ),
+        #080402;
+}
+
+
+.ending-content
+.big-end-number {
+    font-family:
+        "Italiana",
+        serif;
+
+    font-size: 140px;
+
+    line-height: .8;
+
+    color:
+        #ddb15b;
+}
+
+
+.ending h2 {
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 62px;
+
+    font-weight: 400;
+
+    color:
+        #e8c67e;
+}
+
+
+.ending p {
+    max-width: 470px;
+
+    margin:
+        15px auto;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color:
+        #b4a18a;
+}
+
+
+.ending h3 {
+    font-family:
+        "Parisienne",
+        cursive;
+
+    font-size: 50px;
+
+    font-weight: 400;
+}
+
+
+.ending .date {
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color:
+        #ac946a;
+}
+
+
+footer {
+    padding: 30px 15px;
+
+    background:
+        #040201;
+
+    text-align: center;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 14px;
+
+    color:
+        #a89270;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity .75s ease,
+        transform .75s ease;
+}
+
+
+.reveal.show {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* Responsive invitation: keep the composition inside the viewport. */
+.hero { height: auto; min-height: 0; display: block; }
+.hero-layout { width: 100%; max-width: 1200px; height: clamp(700px, 88vw, 1000px); display: block; }
+.hero-center { position: absolute; inset: 9% 25% auto; width: 50%; padding: 0; transform: none; }
+.invited { font-size: clamp(9px, 1.1vw, 13px); letter-spacing: clamp(2px, .4vw, 5px); margin-bottom: 24px; }
+.number-area { height: clamp(190px, 23vw, 275px); }
+.eighteen { font-size: clamp(210px, 26vw, 310px); }
+.crown { top: -12px; font-size: clamp(28px, 4vw, 45px); }
+.ordinal { font-size: clamp(40px, 5vw, 60px); }
+.birthday { font-size: clamp(74px, 9vw, 108px); margin-top: -20px; }
+.celebration { margin-top: 22px; font-size: 11px; letter-spacing: 5px; }
+.samantha { font-size: clamp(65px, 8vw, 96px); margin-top: 12px; }
+.quote { font-size: 11px; max-width: 320px; letter-spacing: 2px; }
+.person { position: absolute; inset: 0; height: 100%; z-index: 4; }
+.person img { height: auto; width: 51%; bottom: 17%; }
+.person-left img { left: -8%; }
+.person-right img { right: -10%; }
+.side-label { z-index: 1; text-shadow: 0 2px 8px #160a02; position: absolute; top: 23%; color: #f3dbac; font: clamp(27px, 4vw, 48px)/.95 "Parisienne", cursive; text-align: center; }
+.person-left .side-label { left: 2%; }
+.person-right .side-label { right: 2%; }
+.cake-area { margin-top: 20px; height: 60px; }
+.countdown-box { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); width: min(530px, 64%); z-index: 8; text-align: center; }
+.count-title { font-size: 11px; letter-spacing: 2px; }
+.count-item strong { font-size: 34px; }
+.count-item small { font-size: 11px; letter-spacing: 1px; }
+.hero-nav { position: absolute; inset: 0 7% auto; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 65px; }
+.hero-nav a { color: #f3dbac; text-decoration: none; }
+.hero-brand { font: 38px "Parisienne", cursive; }
+.nav-links { display: flex; gap: clamp(14px, 3vw, 40px); }
+.nav-links a { display: inline-flex; align-items: center; min-height: 44px; font: 12px "Cormorant Garamond", serif; letter-spacing: 1px; }
+.invite-link { border-radius: 24px; padding: 12px 22px; background: linear-gradient(110deg,#b78a40,#f4d99a,#b78a40); color: #38200b !important; font-size: 10px; letter-spacing: 1px; }
+.scroll-link { position: absolute; bottom: 2%; left: 50%; transform: translateX(-50%); z-index: 9; color: #f3dbac; text-align: center; text-decoration: none; font: 10px "Cormorant Garamond", serif; letter-spacing: 2px; padding: 10px; }
+a:focus-visible { outline: 2px solid #f3dbac; outline-offset: 4px; }
+section { scroll-margin-top: 16px; }
+.names-grid > *, .program-item > *, .details-grid > * { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 768px) {
+  .hero-layout { height: clamp(610px, 110vw, 780px); }
+  .hero-nav { inset-inline: 5%; min-height: 62px; gap: 10px; }
+  .hero-brand { font-size: 32px; }
+  .nav-links { gap: 15px; }
+  .invite-link { padding: 12px; font-size: 8px; }
+  .hero-center { inset: 100px 23% auto; width: 54%; }
+  .invited { width: 160%; margin-left: -30%; font-size: 9px; letter-spacing: 2px; margin-bottom: 20px; }
+  .number-area { height: clamp(140px, 25vw, 190px); }
+  .eighteen { font-size: clamp(145px, 29vw, 220px); }
+  .ordinal { font-size: 32px; margin-top: 22px; }
+  .crown { font-size: 27px; top: -16px; }
+  .birthday { font-size: clamp(48px, 9.5vw, 74px); margin-top: -8px; }
+  .celebration { font-size: 8px; letter-spacing: 2px; margin-top: 18px; }
+  .samantha { font-size: clamp(41px, 8vw, 62px); margin-top: 12px; line-height: 1.15; }
+  .quote { font-size: 9px; letter-spacing: 1px; line-height: 1.6; }
+  .divider { margin: 0 auto 10px; gap: 8px; }
+  .divider span { width: 35px; }
+  .person img { width: 60%; bottom: 22%; }
+  .person-left img { left: -15%; }
+  .person-right img { right: -17%; }
+  .side-label { top: auto; bottom: 59%; font-size: clamp(24px, 4vw, 32px); }
+  .person-left .side-label { left: 3%; }
+  .person-right .side-label { right: 3%; }
+  .cake-area { margin-top: 14px; height: 48px; }
+  .countdown-box { width: 86%; bottom: 9%; padding: 12px 10px; border-radius: 17px; }
+  .count-title { font-size: 9px; letter-spacing: 1.5px; }
+  .count-item strong { font-size: 29px; }
+  .count-item small { font-size: 10px; letter-spacing: .5px; }
+  .scroll-link { bottom: 2%; }
+  .invitation-section, .details-section, .program-section, .participants { padding: 65px 16px; }
+  .invitation-card { padding: 36px 18px; }
+  .script-title, .section-heading h2, .participant-heading h2, .ending h2 { font-size: clamp(40px, 8vw, 55px); }
+  .eyebrow { letter-spacing: 3px; line-height: 1.8; }
+  .details-grid { grid-template-columns: 1fr; }
+  .detail-card { padding: 27px 10px; }
+  .detail-card:not(:last-child) { border-right: 0; border-bottom: 1px solid rgba(120,80,35,.18); }
+  .program-item { grid-template-columns: 28px 1px minmax(0,1fr); gap: 12px; }
+  .program-number { font-size: 22px; }
+  .program-info h3 { font-size: 24px; }
+  .special .program-info { padding: 17px 13px; }
+  .names-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .name-card { padding: 10px; gap: 8px; }
+  .name-card h4 { font-size: 18px; }
+  .name-card span { font-size: 20px; }
+}
+@media (max-width: 420px) {
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 10px; letter-spacing: .4px; }
+  .invite-link { display: none; }
+  .hero-center { top: 98px; }
+  .hero-layout { height: 610px; }
+  .person img { width: 65%; bottom: 24%; }
+  .person-left img { left: -18%; }
+  .person-right img { right: -20%; }
+  .side-label { bottom: 64%; font-size: 22px; }
+  .quote { font-size: 9px; letter-spacing: .4px; margin-bottom: 0; }
+  .hero-center .cake-area { margin-top: 6px; height: 40px; }
+  .count-title { font-size: 8px; letter-spacing: 1px; }
+  .count-item strong { font-size: 26px; }
+  .names-grid { grid-template-columns: minmax(0,1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* A dedicated phone composition; each element has its own clear space. */
+@media (max-width: 768px) {
+ .hero { background-position: center; }
+ .hero::before { background: linear-gradient(180deg,rgba(12,5,1,.15),rgba(12,5,1,.4) 35%,transparent 75%),radial-gradient(ellipse at 50% 40%,#160a0399,transparent 65%); }
+ .hero-layout { height: clamp(660px, 125vw, 850px); }
+ .hero-nav { inset-inline: 6%; }
+ .hero-center { inset: 0; width: 100%; height: 100%; }
+ .hero-center > * { position: absolute; margin: 0; left: 50%; transform: translateX(-50%); }
+ .hero-center .invited { top: 13%; width: 90%; font-size: clamp(8px,1.8vw,11px); letter-spacing: 2px; }
+ .hero-center .number-area { top: 18%; width: 48%; height: 22%; }
+ .eighteen { font-size: clamp(132px,32vw,235px); }
+ .ordinal { font-size: clamp(28px,6vw,44px); }
+ .crown { top: -13px; font-size: 25px; }
+ .hero-center .birthday { top: 39%; width: 52%; font-size: clamp(42px,10vw,76px); line-height: 1; }
+ .hero-center .celebration { top: 47%; width: 52%; font-size: 8px; letter-spacing: 2px; }
+ .hero-center .samantha { top: 51%; width: 54%; font-size: clamp(39px,9.5vw,72px); line-height: 1.2; }
+ .hero-center .divider { top: 59%; width: 35%; }
+ .hero-center .quote { top: 67%; width: 80%; max-width: 380px; font-size: 10px; line-height: 1.7; letter-spacing: 1px; text-shadow: 0 2px 8px #000; }
+ .hero-center .cake-area { display: none; }
+ .person img { bottom: 34%; width: 48%; }
+ .person-left img { left: -7%; }
+ .person-right img { width: 48%; right: -8%; }
+ .side-label { top: auto; bottom: calc(34% + 60vw + 12px); font-size: clamp(21px,4vw,30px); }
+ .person-left .side-label { left: 5%; }
+ .person-right .side-label { right: 5%; }
+ .countdown-box { bottom: 9%; width: 86%; border-radius: 16px; padding: 12px 10px 14px; background: rgba(39,19,6,.85); }
+ .count-title { font-size: 9px; letter-spacing: 1.3px; }
+ .count-item strong { font-size: 30px; line-height: 1.2; }
+ .count-item small { font-size: 10px; margin-top: 5px; }
+ .scroll-link { bottom: 2%; }
+}
+@media (min-width: 421px) and (max-width: 768px) {
+ .person img { bottom: 34%; width: 42%; }
+ .person-left img { left: -3%; }
+ .person-right img { width: 42%; right: -5%; }
+ .side-label { top: auto; bottom: calc(34% + 52.5vw + 12px); }
+}
+
+/* Remove the generated chroma backdrop while keeping the complete gown. */
+.person-left img { filter: url(#gown-cutout) drop-shadow(0 8px 12px rgba(0,0,0,.25)); }
+@media (max-width: 420px) { .person-left img { width: 40%; left: -1%; } }
+@media (min-width: 421px) and (max-width: 768px) { .person-left img { width: 35%; left: 2%; } }
+
+/* Event information cards */
+.details-section { padding: 80px max(20px,calc((100vw - 1100px)/2)); background: radial-gradient(ellipse at top,#fffdf8,#f6ecdd); }
+.details-section .section-heading { margin-bottom: 32px; }
+.details-section .eyebrow { font-size: 10px; letter-spacing: 3.5px; }
+.details-section .section-heading h2 { margin: 8px 0 6px; line-height: 1.15; }
+.details-intro { color: #806b54; font: 18px/1.6 "Cormorant Garamond",serif; }
+.details-grid { gap: 18px; grid-template-columns: repeat(3,minmax(0,1fr)); }
+.detail-card, .detail-card:not(:last-child) { border: 1px solid #ddc8a8; border-radius: 18px; padding: 32px 20px; background: #fffaf2; box-shadow: 0 8px 28px #63431508; text-align: center; }
+.detail-icon { width: 62px; height: 62px; margin: 0 auto 22px; display: grid; place-items: center; color: #986921; border: 1px solid #e7d3ae; border-radius: 50%; background: linear-gradient(145deg,#fff9ed,#f1e2c7); }
+.detail-icon svg { width: 31px; height: 31px; display: block; }
+.detail-label { display: block; color: #96723f; font: 500 10px/1.5 "Montserrat",sans-serif; letter-spacing: 2.5px; margin-bottom: 10px; }
+.detail-card h3 { color: #452c19; font: 600 28px/1.2 "Cormorant Garamond",serif; }
+.detail-card p { color: #7b6854; font: 17px/1.55 "Cormorant Garamond",serif; margin-top: 10px; }
+@media(max-width:768px) {
+ .details-section { padding: 56px 18px; }
+ .details-section .section-heading h2 { font-size: 48px; }
+ .details-intro { max-width: 260px; margin: auto; font-size: 17px; }
+ .details-grid { grid-template-columns: minmax(0,1fr); gap: 12px; }
+ .detail-card, .detail-card:not(:last-child) { display: grid; grid-template-columns: 52px minmax(0,1fr); column-gap: 18px; padding: 23px 20px; text-align: left; border-radius: 14px; }
+ .detail-icon { grid-column: 1; grid-row: 1 / 4; width: 52px; height: 52px; margin: 0; align-self: center; }
+ .detail-icon svg { width: 28px; height: 28px; }
+ .detail-label { grid-column: 2; margin-bottom: 6px; font-size: 9px; letter-spacing: 2px; }
+ .detail-card h3 { grid-column: 2; font-size: 25px; }
+ .detail-card p { grid-column: 2; font-size: 16px; margin-top: 5px; }
+}
+@media(max-width:340px) {
+ .details-section { padding-inline: 14px; }
+ .detail-card, .detail-card:not(:last-child) { padding: 20px 14px; column-gap: 12px; grid-template-columns: 44px minmax(0,1fr); }
+ .detail-icon { width: 44px; height: 44px; }
+ .detail-icon svg { width: 25px; height: 25px; }
+ .detail-card h3 { font-size: 23px; }
+}
+
+/* Closing palette: warm burgundy, champagne, and ivory. */
+.ending { min-height: 0; padding: 82px 20px 68px; background: radial-gradient(ellipse at 50% 30%,#46232a 0%,#291419 65%); border-top: 1px solid #b99a6638; }
+.ending-content { width: min(560px,100%); }
+.ending .eyebrow { color: #d8bc89; font-size: 10px; letter-spacing: 3px; margin-bottom: 24px; }
+.ending-content .big-end-number { color: #dfc394; font-size: clamp(104px,18vw,140px); line-height: .9; }
+.ending h2 { color: #fff2df; font-size: clamp(42px,7vw,62px); line-height: 1.2; margin-top: 14px; }
+.ending p { color: #e0ccd0; font-size: 18px; line-height: 1.75; max-width: 390px; margin: 22px auto 26px; }
+.ending h3 { color: #dfc394; font-size: clamp(44px,7vw,56px); line-height: 1.2; }
+.ending .date { color: #e5d3b3; border-top: 1px solid #d8bc8940; padding-top: 23px; margin: 23px auto 0; font-size: 10px; line-height: 1.9; letter-spacing: 2px; }
+footer { background: #291419; border-top: 1px solid #d8bc8926; color: #d3bfc3; padding: 23px 18px; font-size: 14px; line-height: 1.8; }
+@media(max-width:420px) { .ending { padding: 58px 24px 42px; } .ending p { font-size: 17px; } .ending .date { font-size: 9px; letter-spacing: 1.3px; } }
+
+/* Cap sections at one screen; participant lists retain their natural height. */
+section:not(.participants) {
+ max-height: 100vh;
+ max-height: 100svh;
+ overflow-y: auto;
+ overflow-x: hidden;
+ scrollbar-width: thin;
+ scrollbar-color: #b68c52 transparent;
+}
+section:not(.participants):focus-visible { outline: 2px solid #d3a047; outline-offset: -3px; }
+.hero-frame { position: relative; height: clamp(700px,88vw,1000px); }
+.hero-layout { height: 100%; }
+.ending { display: block; }
+.ending-content { margin-inline: auto; }
+@media(max-width:768px) { .hero-frame { height: clamp(660px,125vw,850px); } }
+
+/* Each main section occupies a complete viewport. */
+section:not(.participants) {
+ height: 100svh;
+ min-height: 100svh;
+ max-height: 100svh;
+}
+.hero-frame { height: max(100svh, 660px); }
+.invitation-section, .details-section, .program-section, .ending {
+ display: flex;
+ flex-direction: column;
+}
+.invitation-section > *, .details-section > *, .program-section > *, .ending > * { flex-shrink: 0; }
+.invitation-section > :first-child, .details-section > :first-child,
+.program-section > :first-child, .ending > :first-child { margin-top: auto; }
+.invitation-section > :last-child, .details-section > :last-child,
+.program-section > :last-child, .ending > :last-child { margin-bottom: auto; }
+@media(min-width:769px) { .hero-frame { height: max(100svh, 800px); } }
+</style>
+</head>
+
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute;pointer-events:none"><defs>
+<filter id="gown-cutout" color-interpolation-filters="sRGB" x="-5%" y="-5%" width="110%" height="110%">
+<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  8 -8 0 1 0"/>
+</filter></defs></svg>
+
+
+<!-- ======================================
+     HERO
+====================================== -->
+
+<section class="hero" id="home" tabindex="0" aria-label="Birthday invitation">
+<div class="hero-frame">
+
+<div class="hero-layout">
+<nav class="hero-nav" aria-label="Main navigation">
+  <a class="hero-brand" href="#home" aria-label="Home">18th</a>
+  <div class="nav-links"><a href="#home">HOME</a><a href="#details">DETAILS</a><a href="#program">PROGRAM</a></div>
+  <a class="invite-link" href="#invitation">YOU’RE INVITED ♡</a>
+</nav>
+
+
+    <!-- GIRL -->
+
+    <div class="person person-left">
+<span class="side-label" aria-hidden="true">Her<br>Side ♡</span>
+
+        <img
+            src="samantha-girl-chroma.png"
+            alt="Samantha in gown"
+        >
+
+    </div>
+
+
+
+    <!-- CENTER -->
+
+    <div class="hero-center">
+
+
+        <p class="invited">
+            YOU ARE CORDIALLY INVITED TO
+        </p>
+
+
+        <div class="number-area">
+
+            <div class="crown">
+                ♕
+            </div>
+
+
+            <div class="number-wrap">
+
+                <div class="eighteen">
+                    18
+                </div>
+
+                <div class="ordinal">
+                    th
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <h1 class="birthday">
+            Birthday
+        </h1>
+
+
+        <p class="celebration">
+            CELEBRATION OF
+        </p>
+
+
+        <h2 class="samantha">
+            Samantha
+        </h2>
+
+
+        <div class="divider">
+
+            <span></span>
+
+            <b>♡</b>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="quote">
+            “Eighteen years of memories,
+            dreams and beautiful moments.
+            A new chapter begins.”
+        </p>
+
+
+        <!-- CAKE -->
+
+        <div class="cake-area">
+
+            <div class="candles">
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+
+            </div>
+
+            <div class="cake"></div>
+
+        </div>
+
+
+        <!-- COUNTDOWN -->
+
+    </div>
+
+    <!-- BOY / SUIT -->
+
+    <div class="person person-right">
+<span class="side-label" aria-hidden="true">His<br>Side ♡</span>
+
+        <img
+            src="samantha-boy.png"
+            alt="Samantha in suit"
+        >
+
+    </div>
+
+
+</div>
+
+<div class="countdown-box">
+
+            <p class="count-title">
+                COUNTDOWN TO THE CELEBRATION
+            </p>
+
+
+            <div class="count-grid">
+
+
+                <div class="count-item">
+
+                    <strong id="days">
+                        00
+                    </strong>
+
+                    <small>
+                        Days
+                    </small>
+
+                </div>
+
+
+                <div class="count-line"></div>
+
+
+                <div class="count-item">
+
+                    <strong id="hours">
+                        00
+                    </strong>
+
+                    <small>
+                        Hours
+                    </small>
+
+                </div>
+
+
+                <div class="count-line"></div>
+
+
+                <div class="count-item">
+
+                    <strong id="minutes">
+                        00
+                    </strong>
+
+                    <small>
+                        Minutes
+                    </small>
+
+                </div>
+
+
+                <div class="count-line"></div>
+
+
+                <div class="count-item">
+
+                    <strong id="seconds">
+                        00
+                    </strong>
+
+                    <small>
+                        Seconds
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+<a class="scroll-link" href="#invitation">↓<br>SCROLL DOWN</a>
+</div>
+</section>
+
+
+
+<!-- ======================================
+     INVITATION
+====================================== -->
+
+<section class="invitation-section" id="invitation" tabindex="0" aria-label="Invitation">
+
+<div class="invitation-card reveal">
+
+    <p class="eyebrow">
+        YOU ARE INVITED
+    </p>
+
+
+    <h2 class="script-title">
+        Samantha Turns Eighteen
+    </h2>
+
+
+    <div class="divider">
+
+        <span></span>
+
+        <b>♥</b>
+
+        <span></span>
+
+    </div>
+
+
+    <p>
+        With grateful hearts and great joy,
+        we invite you to join us as we celebrate
+        a beautiful milestone in Samantha's life.
+
+        <br><br>
+
+        Join us for an unforgettable evening
+        filled with love, laughter, family,
+        friendship and beautiful memories
+        as Samantha celebrates her
+        eighteenth birthday.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================
+     DETAILS
+====================================== -->
+
+<section class="details-section" id="details" tabindex="0" aria-label="Event details">
+
+
+<div class="section-heading reveal">
+
+    <p class="eyebrow">
+        SAVE THE DATE
+    </p>
+
+    <h2>
+        Event Details
+    </h2>
+    <p class="details-intro">An evening to celebrate, a memory to keep.</p>
+
+</div>
+
+
+<div class="details-grid">
+
+
+    <div class="detail-card reveal">
+
+        <div class="detail-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="24" height="23" rx="4"/><path d="M10 3v6m12-6v6M4 13h24"/><path d="M10 18h2m8 0h2m-12 5h2m8 0h2"/></svg></div>
+
+        <span class="detail-label">
+            DATE
+        </span>
+
+        <h3>
+            September 12, 2026
+        </h3>
+
+        <p>
+            Saturday
+        </p>
+
+    </div>
+
+
+
+    <div class="detail-card reveal">
+
+        <div class="detail-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M16 8v9l6 3"/><path d="M16 4v1m12 11h-1M16 28v-1M4 16h1"/></svg></div>
+
+        <span class="detail-label">
+            TIME
+        </span>
+
+        <h3>
+            6:00 PM
+        </h3>
+
+        <p>
+            Celebration Starts
+        </p>
+
+    </div>
+
+
+
+    <div class="detail-card reveal">
+
+        <div class="detail-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M26 13c0 8-10 16-10 16S6 21 6 13a10 10 0 1 1 20 0Z"/><circle cx="16" cy="13" r="3.5"/></svg></div>
+
+        <span class="detail-label">
+            LOCATION
+        </span>
+
+        <h3>
+            Jay's Resort
+        </h3>
+
+        <p>
+            Pangilin Comp. San Nicolas 1
+            <br>
+            Molino Road, Bacoor, Cavite
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================
+     PROGRAM
+====================================== -->
+
+<section class="program-section" id="program" tabindex="0" aria-label="Celebration program">
+
+
+<div class="section-heading reveal">
+
+    <p class="eyebrow">
+        CELEBRATION FLOW
+    </p>
+
+    <h2>
+        The Program
+    </h2>
+
+</div>
+
+
+<div class="program-list">
+
+
+    <div class="program-item reveal">
+
+        <div class="program-number">
+            01
+        </div>
+
+        <div class="program-line"></div>
+
+        <div class="program-info">
+
+            <small>
+                GRAND ENTRANCE
+            </small>
+
+            <h3>
+                Welcome the Birthday Celebrant
+            </h3>
+
+            <p>
+                Let us welcome Samantha
+                as she begins her
+                eighteenth birthday celebration.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="program-item reveal">
+
+        <div class="program-number">
+            02
+        </div>
+
+        <div class="program-line"></div>
+
+        <div class="program-info">
+
+            <small>
+                BLESSING
+            </small>
+
+            <h3>
+                Prayer
+            </h3>
+
+            <p>
+                A moment of thanksgiving
+                and blessing before the celebration.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="program-item special reveal">
+
+        <div class="program-number">
+            03
+        </div>
+
+        <div class="program-line"></div>
+
+        <div class="program-info">
+
+            <small>
+                DEBUT TRADITION
+            </small>
+
+            <h3>
+                18 Candles
+            </h3>
+
+            <p>
+                Eighteen heartfelt wishes
+                and messages for Samantha.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="program-item reveal">
+
+        <div class="program-number">
+            04
+        </div>
+
+        <div class="program-line"></div>
+
+        <div class="program-info">
+
+            <small>
+                BIRTHDAY MOMENT
+            </small>
+
+            <h3>
+                Blow the Cake
+            </h3>
+
+            <p>
+                Samantha makes her special
+                eighteenth birthday wish.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="program-item reveal">
+
+        <div class="program-number">
+            05
+        </div>
+
+        <div class="program-line"></div>
+
+        <div class="program-info">
+
+            <small>
+                DINING
+            </small>
+
+            <h3>
+                Dinner
+            </h3>
+
+            <p>
+                Enjoy dinner together
+                with family and friends.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="program-item special reveal">
+
+        <div class="program-number">
+            06
+        </div>
+
+        <div class="program-line"></div>
+
+        <div class="program-info">
+
+            <small>
+                CHEERS
+            </small>
+
+            <h3>
+                18 Shots
+            </h3>
+
+            <p>
+                Eighteen cheers for friendship,
+                memories and Samantha's new chapter.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="program-item special reveal">
+
+        <div class="program-number">
+            07
+        </div>
+
+        <div class="program-line"></div>
+
+        <div class="program-info">
+
+            <small>
+                DEBUT TRADITION
+            </small>
+
+            <h3>
+                18 Roses
+            </h3>
+
+            <p>
+                Eighteen meaningful dances
+                with special people in
+                Samantha's life.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================
+     18 CANDLES
+====================================== -->
+
+<section class="
+participants
+candles-section
+">
+
+
+<div class="participant-heading reveal">
+
+    <span class="big-number">
+        18
+    </span>
+
+    <h2>
+        Candles
+    </h2>
+
+    <p>
+        Eighteen meaningful wishes
+        illuminating Samantha's journey.
+    </p>
+
+</div>
+
+
+<div class="names-grid">
+
+<div class="name-card reveal"><span>01</span><h4>Kath</h4></div>
+<div class="name-card reveal"><span>02</span><h4>Milch</h4></div>
+<div class="name-card reveal"><span>03</span><h4>Janna</h4></div>
+<div class="name-card reveal"><span>04</span><h4>Jonnabell</h4></div>
+<div class="name-card reveal"><span>05</span><h4>Zofieya</h4></div>
+<div class="name-card reveal"><span>06</span><h4>Daniella</h4></div>
+<div class="name-card reveal"><span>07</span><h4>Michelle</h4></div>
+<div class="name-card reveal"><span>08</span><h4>Megumi</h4></div>
+<div class="name-card reveal"><span>09</span><h4>Kasylle</h4></div>
+<div class="name-card reveal"><span>10</span><h4>Jilliane</h4></div>
+<div class="name-card reveal"><span>11</span><h4>Cristelle</h4></div>
+<div class="name-card reveal"><span>12</span><h4>Clai</h4></div>
+<div class="name-card reveal"><span>13</span><h4>Shantal</h4></div>
+<div class="name-card reveal"><span>14</span><h4>Zhavia</h4></div>
+<div class="name-card reveal"><span>15</span><h4>Gian</h4></div>
+<div class="name-card reveal"><span>16</span><h4>Sopie</h4></div>
+<div class="name-card reveal"><span>17</span><h4>Maria</h4></div>
+<div class="name-card reveal"><span>18</span><h4>Mommy Maja</h4></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================
+     18 SHOTS
+====================================== -->
+
+<section class="
+participants
+shots-section
+">
+
+
+<div class="participant-heading reveal">
+
+    <span class="big-number">
+        18
+    </span>
+
+    <h2>
+        Shots
+    </h2>
+
+    <p>
+        Eighteen cheers to friendship
+        and unforgettable memories.
+    </p>
+
+</div>
+
+
+<div class="names-grid">
+
+<div class="name-card reveal"><span>01</span><h4>Sopie</h4></div>
+<div class="name-card reveal"><span>02</span><h4>Zopieya</h4></div>
+<div class="name-card reveal"><span>03</span><h4>Mikka</h4></div>
+<div class="name-card reveal"><span>04</span><h4>Janna</h4></div>
+<div class="name-card reveal"><span>05</span><h4>Terrence</h4></div>
+<div class="name-card reveal"><span>06</span><h4>Jomabel</h4></div>
+<div class="name-card reveal"><span>07</span><h4>Clai</h4></div>
+<div class="name-card reveal"><span>08</span><h4>Michelle</h4></div>
+<div class="name-card reveal"><span>09</span><h4>Megumi</h4></div>
+<div class="name-card reveal"><span>10</span><h4>Daniela</h4></div>
+<div class="name-card reveal"><span>11</span><h4>Mae-Mae</h4></div>
+<div class="name-card reveal"><span>12</span><h4>Cristian</h4></div>
+<div class="name-card reveal"><span>13</span><h4>Liklok</h4></div>
+<div class="name-card reveal"><span>14</span><h4>Brian</h4></div>
+<div class="name-card reveal"><span>15</span><h4>Jwen</h4></div>
+<div class="name-card reveal"><span>16</span><h4>Padilla</h4></div>
+<div class="name-card reveal"><span>17</span><h4>Karylle</h4></div>
+<div class="name-card reveal"><span>18</span><h4>Jillian</h4></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================
+     18 ROSES
+====================================== -->
+
+<section class="
+participants
+roses-section
+">
+
+
+<div class="participant-heading reveal">
+
+    <span class="big-number">
+        18
+    </span>
+
+    <h2>
+        Roses
+    </h2>
+
+    <p>
+        Eighteen beautiful dances
+        and memories to treasure forever.
+    </p>
+
+</div>
+
+
+<div class="names-grid">
+
+<div class="name-card reveal"><span>01</span><h4>Jwen</h4></div>
+<div class="name-card reveal"><span>02</span><h4>Padilla</h4></div>
+<div class="name-card reveal"><span>03</span><h4>Brian</h4></div>
+<div class="name-card reveal"><span>04</span><h4>Mae-Mae</h4></div>
+<div class="name-card reveal"><span>05</span><h4>Liklok</h4></div>
+<div class="name-card reveal"><span>06</span><h4>Christian</h4></div>
+<div class="name-card reveal"><span>07</span><h4>AA</h4></div>
+<div class="name-card reveal"><span>08</span><h4>Kenji</h4></div>
+<div class="name-card reveal"><span>09</span><h4>Ice Cube</h4></div>
+<div class="name-card reveal"><span>10</span><h4>Terrence</h4></div>
+<div class="name-card reveal"><span>11</span><h4>Richard</h4></div>
+<div class="name-card reveal"><span>12</span><h4>Audy</h4></div>
+<div class="name-card reveal"><span>13</span><h4>Zues</h4></div>
+<div class="name-card reveal"><span>14</span><h4>Jenico</h4></div>
+<div class="name-card reveal"><span>15</span><h4>John Pascuel</h4></div>
+<div class="name-card reveal"><span>16</span><h4>Nicky Boy</h4></div>
+<div class="name-card reveal"><span>17</span><h4>Nick</h4></div>
+<div class="name-card reveal"><span>18</span><h4>Cholo</h4></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ======================================
+     ENDING
+====================================== -->
+
+<section class="ending" tabindex="0" aria-label="Closing message">
+
+<div class="ending-content reveal">
+
+    <div class="eyebrow">
+        CELEBRATING
+    </div>
+
+
+    <div class="big-end-number">
+        18
+    </div>
+
+
+    <h2>
+        A New Chapter
+    </h2>
+
+
+    <p>
+        Thank you for being part
+        of this special milestone
+        and for making Samantha's
+        eighteenth birthday
+        a celebration to remember.
+    </p>
+
+
+    <h3>
+        Samantha
+    </h3>
+
+
+    <p class="date">
+        SEPTEMBER 12, 2026 · 6:00 PM
+    </p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+Samantha's 18th Birthday Celebration
+<br>
+September 12, 2026
+
+</footer>
+
+
+
+<script>
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+const targetDate =
+    new Date(
+        "2026-09-12T18:00:00+08:00"
+    ).getTime();
+
+
+function updateCountdown() {
+
+    const now =
+        Date.now();
+
+    const distance =
+        targetDate - now;
+
+
+    if (distance <= 0) {
+
+        document
+        .getElementById("days")
+        .textContent = "00";
+
+        document
+        .getElementById("hours")
+        .textContent = "00";
+
+        document
+        .getElementById("minutes")
+        .textContent = "00";
+
+        document
+        .getElementById("seconds")
+        .textContent = "00";
+
+        document
+        .querySelector(
+            ".count-title"
+        )
+        .textContent =
+        "THE CELEBRATION HAS BEGUN";
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            distance /
+            86400000
+        );
+
+
+    const hours =
+        Math.floor(
+            (
+                distance %
+                86400000
+            ) /
+            3600000
+        );
+
+
+    const minutes =
+        Math.floor(
+            (
+                distance %
+                3600000
+            ) /
+            60000
+        );
+
+
+    const seconds =
+        Math.floor(
+            (
+                distance %
+                60000
+            ) /
+            1000
+        );
+
+
+    document
+    .getElementById("days")
+    .textContent =
+    String(days)
+    .padStart(2,"0");
+
+
+    document
+    .getElementById("hours")
+    .textContent =
+    String(hours)
+    .padStart(2,"0");
+
+
+    document
+    .getElementById("minutes")
+    .textContent =
+    String(minutes)
+    .padStart(2,"0");
+
+
+    document
+    .getElementById("seconds")
+    .textContent =
+    String(seconds)
+    .padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                        .classList
+                        .add("show");
+
+                        observer
+                        .unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: .1
+        }
+
+    );
+
+
+revealElements
+.forEach(
+    element =>
+    observer.observe(element)
+);
+
+</script>
+
+</body>
+</html>
+
+
