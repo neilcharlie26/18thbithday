@@ -1519,7 +1519,7 @@ footer { background: #291419; border-top: 1px solid #d8bc8926; color: #d3bfc3; p
 @media(max-width:420px) { .ending { padding: 58px 24px 42px; } .ending p { font-size: 17px; } .ending .date { font-size: 9px; letter-spacing: 1.3px; } }
 
 /* Cap sections at one screen; participant lists retain their natural height. */
-section:not(.participants) {
+section:not(.participants):not(.program-section) {
  max-height: 100vh;
  max-height: 100svh;
  overflow-y: auto;
@@ -1527,7 +1527,7 @@ section:not(.participants) {
  scrollbar-width: thin;
  scrollbar-color: #b68c52 transparent;
 }
-section:not(.participants):focus-visible { outline: 2px solid #d3a047; outline-offset: -3px; }
+section:not(.participants):not(.program-section):focus-visible { outline: 2px solid #d3a047; outline-offset: -3px; }
 .hero-frame { position: relative; height: clamp(700px,88vw,1000px); }
 .hero-layout { height: 100%; }
 .ending { display: block; }
@@ -1535,7 +1535,7 @@ section:not(.participants):focus-visible { outline: 2px solid #d3a047; outline-o
 @media(max-width:768px) { .hero-frame { height: clamp(660px,125vw,850px); } }
 
 /* Each main section occupies a complete viewport. */
-section:not(.participants) {
+section:not(.participants):not(.program-section) {
  height: 100svh;
  min-height: 100svh;
  max-height: 100svh;
@@ -1986,7 +1986,7 @@ html { -webkit-text-size-adjust: 100%; }
      PROGRAM
 ====================================== -->
 
-<section class="program-section" id="program" tabindex="0" aria-label="Celebration program">
+<section class="program-section" id="program" aria-label="Celebration program">
 
 
 <div class="section-heading reveal">
@@ -2618,6 +2618,7 @@ revealElements
 
 </body>
 </html>
+
 
 
 
