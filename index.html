@@ -1551,6 +1551,63 @@ section:not(.participants) {
 .invitation-section > :last-child, .details-section > :last-child,
 .program-section > :last-child, .ending > :last-child { margin-bottom: auto; }
 @media(min-width:769px) { .hero-frame { height: max(100svh, 800px); } }
+
+/* Device sizing uses both available width and height. */
+html { -webkit-text-size-adjust: 100%; }
+.hero-layout { container-type: size; }
+.hero-frame { height: max(100svh,660px); }
+.hero-center { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; }
+.hero-center > * { position: absolute; margin: 0; left: 50%; transform: translateX(-50%); }
+.hero-center .invited { top: 12%; width: 85%; font-size: clamp(8px,1.2cqw,13px); letter-spacing: clamp(1.4px,.4cqw,4px); }
+.hero-center .number-area { top: 18%; width: 48%; height: 21%; }
+.eighteen { font-size: clamp(132px,min(32cqw,28cqh),280px); }
+.ordinal { font-size: clamp(28px,5cqw,52px); margin-top: 20px; }
+.crown { top: -14px; font-size: clamp(24px,3.5cqw,38px); }
+.hero-center .birthday { top: 39%; width: 54%; font-size: clamp(42px,min(10cqw,10cqh),96px); line-height: 1; }
+.hero-center .celebration { top: 47%; width: 54%; font-size: clamp(8px,1.1cqw,11px); letter-spacing: clamp(1.5px,.35cqw,4px); }
+.hero-center .samantha { top: 51%; width: 56%; font-size: clamp(39px,min(9.5cqw,9cqh),84px); line-height: 1.2; }
+.hero-center .divider { top: 61%; width: 30%; }
+.hero-center .quote { top: 67%; width: 80%; max-width: 420px; font-size: clamp(10px,1.2cqw,12px); line-height: 1.7; letter-spacing: 1px; }
+.hero-center .cake-area { display: none; }
+.countdown-box { width: min(86%,530px); bottom: 9%; }
+.count-title { font-size: clamp(9px,1vw,11px); }
+.scroll-link { bottom: 2%; }
+@media(min-width:769px) {
+ .hero-frame { height: max(100svh,740px); }
+ .person-left img { width: min(40cqw,39cqh); left: 1%; bottom: 24%; }
+ .person-right img { width: min(48cqw,47cqh); right: -5%; bottom: 24%; }
+ .side-label { top: 15%; bottom: auto; font-size: clamp(28px,3.5cqw,40px); }
+ .person-left .side-label { left: 5%; }
+ .person-right .side-label { right: 5%; }
+ .hero-nav { inset-inline: 5%; }
+}
+@media(min-width:421px) and (max-width:768px) {
+ .person-left img { width: min(35cqw,35cqh); left: 2%; }
+ .person-right img { width: min(42cqw,42cqh); right: -5%; }
+ .side-label { bottom: calc(34% + min(52.5cqw,52.5cqh) + 12px); }
+}
+@media(min-width:769px) and (max-width:1024px) {
+ .invitation-section, .details-section, .program-section, .participants { padding-inline: 28px; }
+ .names-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .detail-card, .detail-card:not(:last-child) { padding-inline: 16px; }
+ .detail-card h3 { font-size: 25px; }
+}
+@media(max-height:700px) {
+ .invitation-section, .details-section, .program-section, .ending { padding-top: 32px; padding-bottom: 32px; }
+ .invitation-card { padding-block: 28px; }
+ .section-heading { margin-bottom: 24px; }
+ .ending .eyebrow { margin-bottom: 14px; }
+ .ending-content .big-end-number { font-size: 100px; }
+ .ending p { margin-block: 14px; }
+}
+
+@media(min-width:769px) {
+ .side-label { top: calc(76cqh - min(60cqw,58.5cqh) - 76px); }
+}
+@media(min-width:769px) and (max-aspect-ratio:1/1) {
+ .person-left img, .person-right img { bottom: 34%; }
+ .side-label { top: calc(66cqh - min(60cqw,58.5cqh) - 76px); }
+}
 </style>
 </head>
 
